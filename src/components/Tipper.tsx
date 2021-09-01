@@ -8,33 +8,45 @@ const Tipper = () => {
 
   return (
     <div className="Tipper">
-      <div>
-        <div>
+      <div className="tipForm">
+        <div className="bill">
           <label htmlFor="bill">Bill</label>
           <input
             type="number"
             name="bill"
             id="bill"
             value={bill}
-            onChange={(e) => setBill(parseInt(e.target.value))}
+            onChange={(e) => setBill(parseFloat(e.target.value))}
           />
         </div>
-        <div>
-          <p>Select Tip %</p>
-          <button onClick={() => setTip(5)}>5%</button>
-          <button onClick={() => setTip(10)}>10%</button>
-          <button onClick={() => setTip(15)}>15%</button>
-          <button onClick={() => setTip(25)}>25%</button>
-          <button onClick={() => setTip(50)}>50%</button>
+        <p>Select Tip %</p>
+        <div className="tipButtonContainer">
+          <button className="tipButtons" onClick={() => setTip(5)}>
+            5%
+          </button>
+          <button className="tipButtons" onClick={() => setTip(10)}>
+            10%
+          </button>
+          <button className="tipButtons" onClick={() => setTip(15)}>
+            15%
+          </button>
+          <button className="tipButtons" onClick={() => setTip(25)}>
+            25%
+          </button>
+          <button className="tipButtons" onClick={() => setTip(50)}>
+            50%
+          </button>
           <input
             type="number"
             name="custom"
             id="custom"
+            className="tipButtons"
+            placeholder="Custom"
             value={tip}
             onChange={(e) => setTip(parseInt(e.target.value))}
           />
         </div>
-        <div>
+        <div className="people">
           <label htmlFor="people">Number of People</label>
           <input
             type="number"
@@ -45,21 +57,28 @@ const Tipper = () => {
           />
         </div>
       </div>
-      <div>
-        <div>
-          <div>
+      <div className="tipResult">
+        <div className="resultDiv">
+          <div className="resultHeading">
             <h2>Tip Amount</h2>
             <p>/ person</p>
           </div>
-          <p>{(bill * tip) / people}</p>
+          <p className="resultNumbers">{`$${(
+            (bill * tip) /
+            100 /
+            people
+          ).toFixed(2)}`}</p>
         </div>
-        <div>
-          <div>
+        <div className="resultDiv">
+          <div className="resultHeading">
             <h2>Total</h2>
             <p>/ person</p>
           </div>
-          <p>{bill / people + (bill * tip) / people}</p>
+          <p className="resultNumbers">
+            {`$${(bill / people + (bill * tip) / 100 / people).toFixed(2)}`}
+          </p>
         </div>
+        <button className="resetButton">RESET</button>
       </div>
     </div>
   );
