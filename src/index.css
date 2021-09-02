@@ -23,8 +23,20 @@ input {
 
 input {
   box-sizing: border-box;
-  background-color: hsl(189, 41%, 97%);
+  background-color: hsl(185, 41%, 84%);
   color: hsl(186, 14%, 43%);
+  text-align: right;
+  padding: 0 10px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 button,
@@ -45,5 +57,5 @@ button:hover {
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 20px;
 }

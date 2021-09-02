@@ -25,6 +25,27 @@
   flex-direction: column;
 }
 
+.Tipper .tipForm {
+  padding: 20px;
+}
+
+.Tipper .inputs {
+  width: 100%;
+  background-color: hsl(185, 41%, 84%);
+  display: flex;
+  justify-content: space-between;
+}
+
+.Tipper .icons {
+  width: 15px;
+  height: 30px;
+  transform: translate(10px, 2px);
+}
+
+#custom {
+  text-align: center;
+}
+
 .Tipper .resultHeading {
   color: hsl(189, 41%, 97%);
 }
@@ -35,8 +56,14 @@
   padding: 20px;
 }
 
+.Tipper .personText {
+  font-size: 16px;
+  color: hsl(185, 41%, 84%);
+}
+
 .Tipper .resultNumbers {
   color: hsl(172, 67%, 45%);
+  font-size: 30px;
 }
 
 .Tipper .resetButton {
