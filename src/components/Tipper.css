@@ -25,15 +25,15 @@
   flex-direction: column;
 }
 
-.Tipper .tipForm {
-  padding: 20px;
-}
-
 .Tipper .inputs {
   width: 100%;
   background-color: hsl(185, 41%, 84%);
   display: flex;
   justify-content: space-between;
+}
+
+.Tipper .tipForm {
+  margin-bottom: 20px;
 }
 
 .Tipper .icons {
@@ -69,6 +69,9 @@
 .Tipper .resetButton {
   background-color: hsl(172, 67%, 45%);
   color: hsl(183, 100%, 15%);
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 15px;
 }
 
 .Tipper .resultDiv {
@@ -96,5 +99,12 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  }
+  .Tipper .tipForm {
+    padding: 20px;
+  }
+
+  .Tipper .resetButton {
+    margin: 0;
   }
 }

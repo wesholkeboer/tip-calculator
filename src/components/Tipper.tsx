@@ -9,6 +9,12 @@ const Tipper = () => {
   const [tip, setTip] = useState<number>(0);
   const [tip2, setTip2] = useState<any>("Custom");
   const [people, setPeople] = useState<number>(0);
+  const handleClick = () => {
+    setBill(0);
+    setTip(0);
+    setTip2("Custom");
+    setPeople(0);
+  };
 
   return (
     <div className="Tipper">
@@ -96,7 +102,9 @@ const Tipper = () => {
             </p>
           </div>
         </div>
-        <button className="resetButton">RESET</button>
+        <button onClick={handleClick} className="resetButton">
+          RESET
+        </button>
       </div>
     </div>
   );
