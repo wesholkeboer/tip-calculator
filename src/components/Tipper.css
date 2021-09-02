@@ -48,3 +48,26 @@
   display: flex;
   justify-content: space-between;
 }
+
+@media only screen and (min-width: 768px) {
+  .Tipper {
+    flex-direction: row;
+    width: 70%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .Tipper .tipButtons {
+    width: 30%;
+  }
+  .Tipper .tipForm {
+    flex: 1;
+  }
+  .Tipper .tipResult {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}

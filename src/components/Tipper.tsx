@@ -58,25 +58,27 @@ const Tipper = () => {
         </div>
       </div>
       <div className="tipResult">
-        <div className="resultDiv">
-          <div className="resultHeading">
-            <h2>Tip Amount</h2>
-            <p>/ person</p>
+        <div>
+          <div className="resultDiv">
+            <div className="resultHeading">
+              <h2>Tip Amount</h2>
+              <p>/ person</p>
+            </div>
+            <p className="resultNumbers">{`$${(
+              (bill * tip) /
+              100 /
+              people
+            ).toFixed(2)}`}</p>
           </div>
-          <p className="resultNumbers">{`$${(
-            (bill * tip) /
-            100 /
-            people
-          ).toFixed(2)}`}</p>
-        </div>
-        <div className="resultDiv">
-          <div className="resultHeading">
-            <h2>Total</h2>
-            <p>/ person</p>
+          <div className="resultDiv">
+            <div className="resultHeading">
+              <h2>Total</h2>
+              <p>/ person</p>
+            </div>
+            <p className="resultNumbers">
+              {`$${(bill / people + (bill * tip) / 100 / people).toFixed(2)}`}
+            </p>
           </div>
-          <p className="resultNumbers">
-            {`$${(bill / people + (bill * tip) / 100 / people).toFixed(2)}`}
-          </p>
         </div>
         <button className="resetButton">RESET</button>
       </div>
